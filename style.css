@@ -18,12 +18,13 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   color: var(--txt-color);
   box-shadow: var(--star);
+
   transition: all, ease 1.5s;
 }
 .centralizado {
   margin: auto;
   max-width: 700px;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 }
 
 /*=======PAGE CONTENT=======*/
