@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --btn-color: rgb(66, 66, 66);
+  --txt-color: hsl(28, 22%, 83%);
+  --p-color: rgba(223, 158, 98, 0.8);
+}
+
+body {
+  background: linear-gradient(246.73deg, #3d3d3d 17.02%, #252525 98.79%);
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--txt-color);
+  box-shadow: var(--star);
+  transition: all, ease 1.5s;
+}
+.centralizado {
+  margin: auto;
+  max-width: 700px;
+  margin-top: 4rem;
+}
+
+/*=======PAGE CONTENT=======*/
+header {
+  display: flex;
+  margin-top: 0.5%;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.6rem 8rem;
+  gap: 1rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 16px 80px;
+  gap: 10px;
+}
+.container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  width: 300px;
+  height: 53px;
+
+  background: var(--btn-color);
+  border-radius: 3rem;
+
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+
+  transition: all, ease 0.5s;
+}
+.container a:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(223, 158, 98, 0.29),
+      rgba(223, 158, 98, 0.29)
+    ),
+    rgba(217, 217, 217, 0.29);
+
+  transition: all, ease 0.5s;
+}
+.container a i {
+  padding-right: 5px;
+}
+.inf-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  text-align: center;
+}
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--txt-color);
+}
+p {
+  font-size: 0.8rem;
+  color: var(--p-color);
+}
+#sub {
+  width: 250%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*========COMPARTILHAMENTO==========*/
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: left;
+
+  margin-top: 3.5rem;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper :is(.btn, .link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--btn-color);
+  color: var(--bg-color);
+  border-radius: 50%;
+  transition: all, ease-out 0.5s;
+}
+.btn {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: outline 0.25s;
+}
+
+.wrapper button {
+  transition: all, ease-out 1.5s;
+}
+
+.active .btn,
+.btn:hover {
+  outline: 5px solid var(--bg-color);
+  outline-offset: -4px;
+  transition: all, ease-in 0.1s;
+}
+
+.item {
+  position: absolute;
+  list-style: none;
+  transition: transform 0.5s;
+  transition-delay: var(--d);
+}
+
+.wrapper.active .item:nth-child(1) {
+  transform: translateX(-55px);
+}
+
+.wrapper.active .item:nth-child(2) {
+  transform: translateY(-55px);
+}
+
+.wrapper.active .item:nth-child(3) {
+  transform: translateX(55px);
+}
+
+.wrapper.active .item:nth-child(4) {
+  transform: translateY(55px);
+}
+.link:hover {
+  color: #fff;
+  transition: background-color 0.25s;
+}
+
+.ig:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.wa:hover {
+  background-color: hsl(113, 67%, 41%);
+}
+
+.ws:hover {
+  background-color: rgb(223, 158, 98);
+  transition: all, ease 0.5s;
+}
+
+.yt:hover {
+  background-color: hsl(9, 54%, 50%);
+}
+body.dark .ig:hover {
+  color: #fff;
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+body.dark .wa:hover {
+  color: #fff;
+  background-color: rgba(43, 153, 43, 0.671);
+}
+
+body.dark .gh:hover {
+  color: #fff;
+  background-color: rgba(128, 128, 128, 0.548);
+}
+
+/*========STAR ANIMATION==========*/
+.stars {
+  width: 3px;
+  height: 3px;
+  margin-left: -23rem;
+  border-radius: 50%;
+  box-shadow: 50px 30px var(--bg-drk-mode), 100px 80px var(--bg-drk-mode),
+    80px 120px var(--bg-drk-mode), 300px 20px var(--bg-drk-mode),
+    250px 130px var(--bg-drk-mode), 200px 50px var(--bg-drk-mode),
+    150px 100px var(--bg-drk-mode), 320px 100px var(--bg-drk-mode);
+  animation: anim-stars 10s linear infinite;
+  transition: all, ease 0.5s;
+}
+@keyframes anim-stars {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-150px);
+  }
+}
+.stars::after {
+  content: ' ';
+  width: 3x;
+  height: 3px;
+  border-radius: 50%;
+  box-shadow: 50px 30px var(--bg-drk-mode), 100px 80px var(--bg-drk-mode),
+    80px 120px var(--bg-drk-mode), 300px 20px var(--bg-drk-mode),
+    250px 130px var(--bg-drk-mode), 200px 50px var(--bg-drk-mode),
+    150px 100px var(--bg-drk-mode), 320px 100px var(--bg-drk-mode);
+}
+
+/*====EFFECTS ON DARK MOON======*/
+.dark .stars {
+  width: 3px;
+  height: 3px;
+  margin-left: -23rem;
+  border-radius: 50%;
+  box-shadow: 50px 30px white, 100px 80px white, 80px 120px white,
+    300px 20px white, 250px 130px white, 200px 50px white, 150px 100px white,
+    320px 100px white;
+  animation: anim-stars 10s linear infinite;
+  transition: all, ease 0.5s;
+}
+.dark .stars::after {
+  content: ' ';
+  width: 3x;
+  height: 3px;
+  border-radius: 50%;
+  box-shadow: 50px 30px white, 100px 80px white, 80px 120px white,
+    300px 20px white, 250px 130px white, 200px 50px white, 150px 100px white,
+    320px 100px white;
+}
+
+/*======Bubbles====*/
+.bubbles {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--bubble-left-offset);
+  bottom: -75%;
+  display: block;
+  width: var(--bubble-radius);
+  height: var(--bubble-radius);
+  border-radius: 50%;
+  z-index: -1;
+  animation: float-up var(--bubble-float-duration) var(--bubble-float-delay)
+    ease-in infinite;
+}
+.bubble::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(223, 158, 98, 0.29),
+      rgba(223, 158, 98, 0.29)
+    ),
+    rgba(217, 217, 217, 0.29);
+  border-radius: inherit;
+  animation: var(--bubble-sway-type) var(--bubble-sway-duration)
+    var(--bubble-sway-delay) ease-in-out alternate infinite;
+}
+.bubble:nth-child(0) {
+  --bubble-left-offset: 42vw;
+  --bubble-radius: 5vw;
+  --bubble-float-duration: 11s;
+  --bubble-sway-duration: 6s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 0s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(1) {
+  --bubble-left-offset: 29vw;
+  --bubble-radius: 6vw;
+  --bubble-float-duration: 9s;
+  --bubble-sway-duration: 4s;
+  --bubble-float-delay: 0s;
+  --bubble-sway-delay: 3s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(2) {
+  --bubble-left-offset: 85vw;
+  --bubble-radius: 7vw;
+  --bubble-float-duration: 11s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 3s;
+  --bubble-sway-delay: 2s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(3) {
+  --bubble-left-offset: 69vw;
+  --bubble-radius: 5vw;
+  --bubble-float-duration: 9s;
+  --bubble-sway-duration: 4s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 3s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(4) {
+  --bubble-left-offset: 82vw;
+  --bubble-radius: 6vw;
+  --bubble-float-duration: 12s;
+  --bubble-sway-duration: 4s;
+  --bubble-float-delay: 4s;
+  --bubble-sway-delay: 1s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(5) {
+  --bubble-left-offset: 63vw;
+  --bubble-radius: 9vw;
+  --bubble-float-duration: 9s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 2s;
+  --bubble-sway-delay: 4s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(6) {
+  --bubble-left-offset: 30vw;
+  --bubble-radius: 4vw;
+  --bubble-float-duration: 9s;
+  --bubble-sway-duration: 6s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 3s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(7) {
+  --bubble-left-offset: 40vw;
+  --bubble-radius: 4vw;
+  --bubble-float-duration: 9s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 0s;
+  --bubble-sway-delay: 2s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(8) {
+  --bubble-left-offset: 4vw;
+  --bubble-radius: 2vw;
+  --bubble-float-duration: 11s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 0s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(9) {
+  --bubble-left-offset: 65vw;
+  --bubble-radius: 2vw;
+  --bubble-float-duration: 12s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 3s;
+  --bubble-sway-delay: 0s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(10) {
+  --bubble-left-offset: 80vw;
+  --bubble-radius: 6vw;
+  --bubble-float-duration: 10s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 2s;
+  --bubble-sway-delay: 4s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(11) {
+  --bubble-left-offset: 86vw;
+  --bubble-radius: 5vw;
+  --bubble-float-duration: 10s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 4s;
+  --bubble-sway-delay: 3s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(12) {
+  --bubble-left-offset: 33vw;
+  --bubble-radius: 2vw;
+  --bubble-float-duration: 8s;
+  --bubble-sway-duration: 6s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 4s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(13) {
+  --bubble-left-offset: 59vw;
+  --bubble-radius: 3vw;
+  --bubble-float-duration: 10s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 3s;
+  --bubble-sway-delay: 2s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(14) {
+  --bubble-left-offset: 0vw;
+  --bubble-radius: 10vw;
+  --bubble-float-duration: 6s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 0s;
+  --bubble-sway-delay: 2s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(15) {
+  --bubble-left-offset: 55vw;
+  --bubble-radius: 8vw;
+  --bubble-float-duration: 7s;
+  --bubble-sway-duration: 6s;
+  --bubble-float-delay: 4s;
+  --bubble-sway-delay: 2s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(16) {
+  --bubble-left-offset: 82vw;
+  --bubble-radius: 7vw;
+  --bubble-float-duration: 6s;
+  --bubble-sway-duration: 4s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 3s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(17) {
+  --bubble-left-offset: 97vw;
+  --bubble-radius: 1vw;
+  --bubble-float-duration: 6s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 3s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(18) {
+  --bubble-left-offset: 45vw;
+  --bubble-radius: 9vw;
+  --bubble-float-duration: 8s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 3s;
+  --bubble-sway-delay: 2s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(19) {
+  --bubble-left-offset: 59vw;
+  --bubble-radius: 4vw;
+  --bubble-float-duration: 12s;
+  --bubble-sway-duration: 6s;
+  --bubble-float-delay: 2s;
+  --bubble-sway-delay: 4s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(20) {
+  --bubble-left-offset: 78vw;
+  --bubble-radius: 8vw;
+  --bubble-float-duration: 7s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 3s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(21) {
+  --bubble-left-offset: 87vw;
+  --bubble-radius: 7vw;
+  --bubble-float-duration: 12s;
+  --bubble-sway-duration: 6s;
+  --bubble-float-delay: 1s;
+  --bubble-sway-delay: 4s;
+  --bubble-sway-type: sway-right-to-left;
+}
+.bubble:nth-child(22) {
+  --bubble-left-offset: 95vw;
+  --bubble-radius: 8vw;
+  --bubble-float-duration: 11s;
+  --bubble-sway-duration: 6s;
+  --bubble-float-delay: 2s;
+  --bubble-sway-delay: 4s;
+  --bubble-sway-type: sway-left-to-right;
+}
+.bubble:nth-child(23) {
+  --bubble-left-offset: 54vw;
+  --bubble-radius: 2vw;
+  --bubble-float-duration: 12s;
+  --bubble-sway-duration: 5s;
+  --bubble-float-delay: 2s;
+  --bubble-sway-delay: 4s;
+  --bubble-sway-type: sway-right-to-left;
+}
+@keyframes float-up {
+  to {
+    transform: translateY(-175vh);
+  }
+}
+@keyframes sway-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes sway-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
